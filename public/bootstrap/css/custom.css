@@ -1,0 +1,41 @@
+.form-control2
+{
+	display: block;
+	width: 100%;
+}
+.btn-primary{
+	font-weight: bold;
+}
+.btn-danger{
+	font-weight: bold;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #f3ea47;
+}
+.table-hover > tbody > tr:hover {
+	background-color: #40ec15;
+}
+#result{
+	margin-top: 30px;
+	color: blue;
+	font-weight: bold;
+}
+#ps{
+	color: red;
+	font-weight: bold;
+}
+#resultAndTable{
+	display: none;
+	/*min-width: 1000px;*/
+}
+#form {
+
+}
+@media screen and (max-width: 640px) {
+	table {
+		overflow-x: auto;
+		display: block;
+	}
+}
+
