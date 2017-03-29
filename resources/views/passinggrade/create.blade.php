@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<div>
-	@if (session('status'))
-	<div class="alert alert-success" style="font-weight: bold;">
-		{{ session('status') }}
-	</div>
-	@endif
+
+@if (session('status'))
+<div class="alert alert-success" style="font-weight: bold;">
+	{{ session('status') }}
 </div>
+@endif
+
 <form style="text-align: left;" method="POST" action="{{ action('PassingGradeController@store') }}">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div class="form-group">

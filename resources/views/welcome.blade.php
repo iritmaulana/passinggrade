@@ -3,16 +3,16 @@
 <form id="form">
     <div class="form-group">
         <label>Tes Kemampuan dan Potensi Akademik (TKPA) :</label> <br>
-        <input class="form-control" type="text" id="TKPABenar" placeholder="Jml Soal Bnr">
-        <input class="form-control" type="text" id="TKPASalah" placeholder="Jml Soal Slh">
-        <input class="form-control" type="text" id="TKPA" placeholder="Jml Soal">
+        <input class="form-control form-welcome" type="text" id="TKPABenar" placeholder="Jml Soal Bnr">
+        <input class="form-control form-welcome" type="text" id="TKPASalah" placeholder="Jml Soal Slh">
+        <input class="form-control form-welcome" type="text" id="TKPA" placeholder="Jml Soal">
     </div>
     <br>
     <div class="form-group">
         <label>Tes Kemampuan Dasar (TKD) : </label> <br>
-        <input class="form-control" type="text" id="TKDBenar" placeholder="Jml Soal Bnr">
-        <input class="form-control" type="text" id="TKDSalah" placeholder="Jml Soal Slh">
-        <input class="form-control" type="text" id="TKD" placeholder="Jml Soal">
+        <input class="form-control form-welcome" type="text" id="TKDBenar" placeholder="Jml Soal Bnr">
+        <input class="form-control form-welcome" type="text" id="TKDSalah" placeholder="Jml Soal Slh">
+        <input class="form-control form-welcome" type="text" id="TKD" placeholder="Jml Soal">
     </div>
 </form>
 
@@ -25,7 +25,7 @@
     <br>
     <div >      
         <!-- <table  class="table table-hover table-striped" id="table_ps"> -->
-        <table  class="table table-striped table-bordered dt-responsive nowrap" id="table_ps">
+        <table  class="display nowrap" cellspacing="0" width="100%" id="table_ps">
             <thead>
                 <tr>
                     <th>Kode</th>
@@ -73,13 +73,19 @@
         hasil = ((0.3*hasilTKPA)+(0.7*hasilTKD));
 
         //Display Hasil
-        document.getElementById("ps").innerHTML = hasil;
+        document.getElementById("ps").innerHTML = hasil.toFixed(2);
 
         //Change display properties from non to block;
         document.getElementById("resultAndTable").style.display = "block";
 
-        //Filtering data table 
         table = $('#table_ps').DataTable();
+        table.destroy();
+
+        //Filtering data table 
+        table = $('#table_ps').DataTable({
+            responsive: true
+        });
+
         $.fn.dataTable.ext.search.push(
             function( settings, data, dataIndex ) 
             {

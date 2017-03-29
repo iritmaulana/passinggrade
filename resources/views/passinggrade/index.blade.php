@@ -12,9 +12,11 @@
         </div>
         @endif
     </div>
-    <div style="overflow-x: auto;">
-        <!-- <table  class="table  table-hover table-striped" id="table_id"> -->
-        <table  class="table table-striped table-bordered dt-responsive nowrap" id="table_id">
+    
+    <!-- <table  class="table  table-hover table-striped" id="table_id"> -->
+    <!-- <table  class="table table-striped table-bordered dt-responsive nowrap" id="table_id"> -->
+    <div style="display: block; position: relative;">
+        <table id="table_id" class="display nowrap" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>Kode</th>
@@ -51,14 +53,16 @@
             </tbody>
         </table>
     </div>
+    
 </div>
 <script type="text/javascript">
     $(document).ready( function () {
-        $('#table_id').DataTable({
+        var table = $('#table_id').DataTable({
             responsive: true
         });
 
     } );
+
 </script>
 <script>
     window.csrfToken = '<?php echo csrf_token(); ?>';

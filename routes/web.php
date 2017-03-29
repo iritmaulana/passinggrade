@@ -14,6 +14,6 @@
 Route::get('/','PassingGradeController@show');
 Route::resource('passinggrade', 'PassingGradeController');
 Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('view:clear');
-    return(Artisan::call('view:clear'));
+    $exitCode = system('composer dump-autoload');
+    return($exitCode);
 });

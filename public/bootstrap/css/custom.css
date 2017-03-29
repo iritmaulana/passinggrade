@@ -10,11 +10,6 @@
 	font-weight: bold;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
-	background-color: #f3ea47;
-}
-.table-hover > tbody > tr:hover {
-	background-color: #40ec15;
 }
 #result{
 	margin-top: 30px;
@@ -29,13 +24,22 @@
 	display: none;
 	/*min-width: 1000px;*/
 }
-#form {
-
+.form-welcome{
+	margin-bottom: 2%
 }
-@media screen and (max-width: 640px) {
-	table {
-		overflow-x: auto;
-		display: block;
+@media screen and (min-width: 500px) {
+	.form-welcome{
+		display: inline !important;
+		width: 15% !important;
 	}
 }
 
+table{
+	text-align: left !important;
+}
+tr{
+	display: table-row;
+}
+table.dataTable>tbody>tr.child span.dtr-title{
+	min-width: 170px !important;
+}

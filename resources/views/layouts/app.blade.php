@@ -16,28 +16,19 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-  <!--Data Table -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-2.2.4/pdfmake-0.1.18/dt-1.10.13/b-1.2.4/b-html5-1.2.4/datatables.min.css"/>
-  -->
-  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css"/>
 
+  <!--Data Table Css-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.0/css/rowReorder.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css"/>
 
-
-
-
-
-
-
-  <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-2.2.4/pdfmake-0.1.18/dt-1.10.13/b-1.2.4/b-html5-1.2.4/datatables.min.js"></script> -->
-
-
+  <!--Data Table Javascript-->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.0/js/dataTables.rowReorder.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script>
+
+
 
 
   <!-- Styles -->
@@ -47,7 +38,7 @@
       background-color: #fff;
       /*font-family: 'Raleway', sans-serif;*/
       font-weight: 100;
-      /*height: 100vh;*/
+      height: 100vh;
       /*margin: 0;*/
     }
 
@@ -73,14 +64,8 @@
 
   .content {
     text-align: center;
-    margin-left: 8%;    
-    margin-right: 8%;
-  }
-
-  .table{
-    margin: 0 auto;
-    padding: 0px;
-    width: 100% !important;
+    margin-left: 2%;    
+    margin-right: 2%;
   }
 
   .links > a {
@@ -135,23 +120,18 @@
   }
 }
 /* 900px */
-.form-control{
-  display: inline !important;
-  width: 25% !important;
-  text-align: center;
-}
 
 </style>
 </head>
 <body>
-  <div class="flex-center position-ref full-height" >
     <div class="content">
       <div class="logo">
       </div>
       <div>
         @yield('content')
       </div>
+      <br>
+      <span>PT Ocean Education @2017</span>
     </div>
-  </div>
 </body>
 </html>
